@@ -1,0 +1,480 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1940059C-81A3-4A89-AA93-0B79A16B9CB9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Zeroit.Framework.Progress</RootNamespace>
+    <AssemblyName>Zeroit.Framework.Progress</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>bin\Debug\Zeroit.Framework.Progress.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>bin\Release\Zeroit.Framework.Progress.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>ZeroitStrongKeys.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnidasoProgress\AnidasoCircleProgress.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnidasoProgress\Helper\AnidasoCustomControl.cs" />
+    <Compile Include="AnidasoProgress\Helper\cmd.cs" />
+    <Compile Include="AnidasoProgress\Helper\Elipse.cs" />
+    <Compile Include="AnidasoProgress\Helper\UserControl.cs" />
+    <Compile Include="AnidasoProgress\AnidasoProgressBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BusyBarProgress\BusyBarProgress.cs" />
+    <Compile Include="BusyBar\ResourceFinder.cs" />
+    <Compile Include="BusyBar\Control.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusyBar\IPainter.cs" />
+    <Compile Include="BusyBar\PainterBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusyBar\PainterLine.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusyBar\Grid.cs" />
+    <Compile Include="BusyBar\BlockLines.cs" />
+    <Compile Include="BusyBar\PainterBlockBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusyBar\PainterXP.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusyBar\PainterPathGradient.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusyBar\PainterClock.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusyBar\PainterSillyScope.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusyBar\PainterInstall.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusyBar\PainterFrustratorBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusyBar\WorkDelegatesArguments.cs" />
+    <Compile Include="CircularIndeterminate\CircularIndeterminate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CircularProgressBar\CircularProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CircularProgressDefault\CircularProgressBarDefault.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CircularProgressV2\CircularProgressV2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CircularProgressV3\CircularProgressV3.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CircularProgressV4\CircularProgressV4.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CircularProgressBarV5Clock\CircularProgressV5aClock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CircularProgressV5-Commented\CircularProgressV5.cs" />
+    <Compile Include="CircularProgressV5a\BarData.cs" />
+    <Compile Include="CircularProgressV5a\CircularProgressV5a.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DaggerControls\DaggerCircleProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DaggerControls\DaggerCircleProgressBarV2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DaggerControls\DaggerCircleProgressSmooth.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DigitalClock\DigitalClock.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedProgressBar\ExtendedProgressBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GoogleProgress\GoogleProgress.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gorgeous\Gorgeous.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Helpers\ThemeContainer154.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Helpers\Draw.cs" />
+    <Compile Include="Helpers\Helper.cs" />
+    <Compile Include="Helpers\ControlRenderer.cs" />
+    <Compile Include="Helpers\RoundRect.cs" />
+    <Compile Include="Indicator\Indicator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="iTunes\iTunes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MacOSX\MacOSX - NonOptimized.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MacOSX\MacOSX - Optimized.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MacOSX\MacOSX-Matrix.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MazeProgress\MazeProgress.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProgressAntonio\Helpers.cs" />
+    <Compile Include="ProgressAntonio\ProgressAntonio - Normal.cs" />
+    <Compile Include="ProgressAntonio\ProgressAntonio - Gradient.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProgressBarPlus\dlgCorners.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgressBarPlus\dlgCorners.Designer.cs">
+      <DependentUpon>dlgCorners.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgressBarPlus\dlgFocalPoints.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgressBarPlus\dlgFocalPoints.Designer.cs">
+      <DependentUpon>dlgFocalPoints.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgressBarPlus\DropdownColorBlender.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgressBarPlus\DropdownColorBlender.designer.cs">
+      <DependentUpon>DropdownColorBlender.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgressBarPlus\ProgBarPlus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SupremeProgress\SupremeCircularProgress_zeroit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_Helpers\Animations\PeaceAnimator_WinformAnimation\AnimationFunctions.cs" />
+    <Compile Include="_Helpers\Animations\PeaceAnimator_WinformAnimation\Animator.cs" />
+    <Compile Include="_Helpers\Animations\PeaceAnimator_WinformAnimation\Animator2D.cs" />
+    <Compile Include="_Helpers\Animations\PeaceAnimator_WinformAnimation\Animator3D.cs" />
+    <Compile Include="_Helpers\Animations\PeaceAnimator_WinformAnimation\AnimatorStatus.cs" />
+    <Compile Include="_Helpers\Animations\PeaceAnimator_WinformAnimation\float2D.cs" />
+    <Compile Include="_Helpers\Animations\PeaceAnimator_WinformAnimation\float3D.cs" />
+    <Compile Include="_Helpers\Animations\PeaceAnimator_WinformAnimation\FloatExtensions.cs" />
+    <Compile Include="_Helpers\Animations\PeaceAnimator_WinformAnimation\FPSLimiterKnownValues.cs" />
+    <Compile Include="_Helpers\Animations\PeaceAnimator_WinformAnimation\IAnimator.cs" />
+    <Compile Include="_Helpers\Animations\PeaceAnimator_WinformAnimation\KnownAnimationFunctions.cs" />
+    <Compile Include="_Helpers\Animations\PeaceAnimator_WinformAnimation\Path.cs" />
+    <Compile Include="_Helpers\Animations\PeaceAnimator_WinformAnimation\Path2D.cs" />
+    <Compile Include="_Helpers\Animations\PeaceAnimator_WinformAnimation\Path2DExtensions.cs" />
+    <Compile Include="_Helpers\Animations\PeaceAnimator_WinformAnimation\Path3D.cs" />
+    <Compile Include="_Helpers\Animations\PeaceAnimator_WinformAnimation\Path3DExtensions.cs" />
+    <Compile Include="_Helpers\Animations\PeaceAnimator_WinformAnimation\PathExtensions.cs" />
+    <Compile Include="_Helpers\Animations\PeaceAnimator_WinformAnimation\PeaceAnimator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_Helpers\Animations\PeaceAnimator_WinformAnimation\PeaceAnimatorDialog\PeaceAnimatorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Helpers\Animations\PeaceAnimator_WinformAnimation\PeaceAnimatorDialog\PeaceAnimatorDialog.Designer.cs">
+      <DependentUpon>PeaceAnimatorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Helpers\Animations\PeaceAnimator_WinformAnimation\PeaceAnimatorDialog\PeaceAnimatorUITypeEditor.cs" />
+    <Compile Include="_Helpers\Animations\PeaceAnimator_WinformAnimation\PeaceAnimatorDialog\PeaceInput.cs" />
+    <Compile Include="_Helpers\Animations\PeaceAnimator_WinformAnimation\PeaceAnimatorWithEditor - Extension.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_Helpers\Animations\PeaceAnimator_WinformAnimation\PeaceAnimatorWithEditor - StartFast.cs" />
+    <Compile Include="_Helpers\Animations\PeaceAnimator_WinformAnimation\PeaceAnimatorWithEditor - StartFasterAnimation.cs" />
+    <Compile Include="_Helpers\Animations\PeaceAnimator_WinformAnimation\PeaceAnimatorWithEditor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_Helpers\Animations\PeaceAnimator_WinformAnimation\SafeInvoker.cs" />
+    <Compile Include="_Helpers\Animations\PeaceAnimator_WinformAnimation\SafeInvoker`1.cs" />
+    <Compile Include="_Helpers\Animations\PeaceAnimator_WinformAnimation\Timer.cs" />
+    <Compile Include="_Helpers\Drawing\MyColor.cs" />
+    <Compile Include="_Helpers\Drawing\MyRectangle.cs" />
+    <Compile Include="_Helpers\Drawing\MySize.cs" />
+    <Compile Include="_Helpers\Math\MyMaths.cs" />
+    <Compile Include="_Helpers\Rotating3DCube\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Helpers\Rotating3DCube\Point3D.cs" />
+    <Compile Include="_Helpers\Rotating3DCube\RotatingCube.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_Helpers\LineSeparators\SimpleLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_Helpers\LineSeparators\SimpleLine2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_Helpers\Theme\NYX Theme.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_Helpers\Theme\ThemeManagers\Themes.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_Helpers\Theme\Spicylips Theme.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_Helpers\Utilities.cs" />
+    <Compile Include="_Sliders\MediaSlider\MediaSlider.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MultiCoProgress\IgnitoProgress.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MultiCoProgress\ZeroitMultiCoExtended1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MultiCoProgress\ZeroitMultiCoExtended.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MultiCoProgress\ZeroitMultiCo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_Sliders\OSXBar\OSXBar.cs" />
+    <Compile Include="PieProgressCircle\PieProgressCircle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgressAntonio\ProgressAntonio - Boxed.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProgressBarAlter\ProgressBarAlter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProgressBarAwesome\Helper.cs" />
+    <Compile Include="ProgressBarAwesome\ProgressBarAwesome.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProgressBarClear\ProgressBarClear.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProgressBarClock\Helper.cs" />
+    <Compile Include="ProgressBarClock\ProgressBarClock.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProgressBarPerfect\ProgressBarPerfect.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProgressBarPerplex\ProgressBarPerplex.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProgressBarPie\ProgressBarPie.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProgressBarRect\ProgressBarRect.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProgressBarTransparent\Helper_For_ProgressBarTransparent.cs" />
+    <Compile Include="ProgressBarTransparent\ProgressBarTransparent.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProgressBarUnique\ProgressBarUnique.cs" />
+    <Compile Include="ProgressIndicatorUnique\ProgressIndicatorUnique.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProgressIndicator\ProgressIndicator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProgressPerplex\ProgressPerplex.cs" />
+    <Compile Include="ProgressPie\ProgressPie.cs" />
+    <Compile Include="ProgressSplitter\ProgressSplitter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProgressStatusStrip\ProgressStatusStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RotatingArc\RotatingArc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RotatingCompass\RotatingCompass.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RotatingPieProgress\RotatingPieProgress.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RotatingProgress\RotatingProgress.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sampana\Sampana.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_Sliders\SeekBar\SeekBar.cs" />
+    <Compile Include="SpinnerCircle\SpinnerCircle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SpinningProgress\SpinningProgress.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SupremeProgress\SupremeCircleProgressbar.Designer.cs" />
+    <Compile Include="SupremeProgress\SupremeProgressBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TimeBar\TimeBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ultimate\Ultimate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Win8MarqueeHorizontal\Win8MarqueeHorizontal.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Win8ProgressRing\Win8ProgressRing.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="__NewlyAdded\Bar\KokonsaProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="__NewlyAdded\Circular\KokonsaProgress Bar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="__NewlyAdded\Indicator\KokonsaRotatingIndicator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="__NewlyAdded\Indicator\KokonsaSpinningCircles.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ProgressBarPlus\dlgCorners.resx">
+      <DependentUpon>dlgCorners.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgressBarPlus\dlgFocalPoints.resx">
+      <DependentUpon>dlgFocalPoints.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgressBarPlus\DropdownColorBlender.resx">
+      <DependentUpon>DropdownColorBlender.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgressBarPlus\ProgBarPlus.resx">
+      <DependentUpon>ProgBarPlus.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\spinner.bmp" />
+    <EmbeddedResource Include="_Helpers\Animations\PeaceAnimator_WinformAnimation\PeaceAnimatorDialog\PeaceAnimatorDialog.resx">
+      <DependentUpon>PeaceAnimatorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackgroundImage.png" />
+    <EmbeddedResource Include="ProgressBarPlus\ProgBarPlus.bmp" />
+    <Content Include="Resources\BarberPoleProgressPainter.ico" />
+    <Content Include="Resources\BevelledGradientProgressPainter.ico" />
+    <Content Include="Resources\BevelledProgressPainter.ico" />
+    <Content Include="Resources\BusyBar.bmp" />
+    <None Include="Resources\check.Image.png" />
+    <None Include="Resources\icons8_Double_Left_32px.png" />
+    <None Include="Resources\icons8_Double_Right_32px.png" />
+    <None Include="Resources\icons8_Double_Down_32px.png" />
+    <None Include="Resources\pictureBox1Image.png" />
+    <None Include="Resources\icons8_Online_Support_64px.png" />
+    <Content Include="Resources\PlainBackgroundPainter.ico" />
+    <Content Include="Resources\PlainBorderPainter.ico" />
+    <Content Include="Resources\PlainProgressPainter.ico" />
+    <Content Include="Resources\ProgressBarEx.ico" />
+    <Content Include="Resources\RarBackgroundPainter.ico" />
+    <Content Include="Resources\RarBorderPainter.ico" />
+    <Content Include="Resources\RarProgressBar.ico" />
+    <Content Include="Resources\RarProgressPainter.ico" />
+    <Content Include="Resources\RoundGlossPainter.ico" />
+    <Content Include="Resources\StripedProgressPainter.ico" />
+    <Content Include="Resources\StyledBorderPainter.ico" />
+    <Content Include="Resources\WaveProgressPainter.ico" />
+    <EmbeddedResource Include="Resources\GoogleProgressIndicator.bmp" />
+    <Content Include="Resources\CandyCaneBackgroundPainter.ico" />
+    <Content Include="Resources\CandyCaneProgressPainter.ico" />
+    <Content Include="Resources\DualProgressBar.ico" />
+    <Content Include="Resources\FlatGlossPainter.ico" />
+    <Content Include="Resources\FruityLoopsBackgroundPainter.ico" />
+    <Content Include="Resources\FruityLoopsProgressPainter.ico" />
+    <Content Include="Resources\GoogleProgressIndicatorDimensions.png" />
+    <Content Include="Resources\GoogleProgressIndicatorLayout.png" />
+    <Content Include="Resources\GradientBackgroundPainter.ico" />
+    <Content Include="Resources\GradientGlossPainter.ico" />
+    <Content Include="Resources\JavaProgressPainter.ico" />
+    <Content Include="Resources\MetalProgressPainter.ico" />
+    <Content Include="Resources\MiddleGlossPainter.ico" />
+    <Content Include="Resources\PainterClock.bmp" />
+    <Content Include="Resources\PainterFrustratoBar.bmp" />
+    <Content Include="Resources\PainterInstall.bmp" />
+    <Content Include="Resources\PainterLine.bmp" />
+    <Content Include="Resources\PainterPathGradient.bmp" />
+    <Content Include="Resources\PainterSillyscope.bmp" />
+    <Content Include="Resources\PainterXP.bmp" />
+    <None Include="Zeroit.Framework.Progress.nuspec" />
+    <None Include="ZeroitStrongKeys.snk" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
